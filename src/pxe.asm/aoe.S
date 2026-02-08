@@ -25,7 +25,7 @@ start:
 	pushw	%ax			# save ax
 	call	0f			# pushl ip
 0:	popw	%ax			# popl ip
-	subw	$0b, %ax		# offset by 0: to get _start adress
+	subw	$0b, %ax		# offset by 0: to get _start address
 	cmpw	$0x7c00, %ax		# did we start from 0x7c00?
 	je	0f			# if not, print error
 	popw	%ax			# restore ax (cosmetic)
@@ -61,7 +61,7 @@ start:
 	addw	$0x0f, %bx		# add 15 to round up on paragraph
 	shrw	$4, %bx			# change to paragraphs
 	subw	%bx, %ax		# calculate target segment
-	andw	$0xffc0, %ax		# round down to kb boundry
+	andw	$0xffc0, %ax		# round down to kb boundary
 	movw	%ax, %es		# set es as target segment
 	shrw	$6, %ax			# convert to kb for new free mem
 	pushw	$0x0040			# bios area
@@ -117,7 +117,7 @@ start:
 	jmp	1b			# input error
 
 1:	movb	$0x80, %cs:_drive	# aoe drive is 1st harddisk
-	movw	$aBFT, %bx		# calculate aBFT segment boundry
+	movw	$aBFT, %bx		# calculate aBFT segment boundary
 	subw	%bx, 1			# (x-1) & 0xfff0 + 0x10
 	andw	$0xfff0, %bx
 	addw	$0x10, %bx

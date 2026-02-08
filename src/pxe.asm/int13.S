@@ -90,7 +90,7 @@ int13:	enter	$0, $0
 0:	cmp	$0x18, %ah		# set media type for format
 	jne	0f
 	jmp	x18
-0:	cmp	$0x41, %ah		# extentions
+0:	cmp	$0x41, %ah		# extensions
 	jne	0f
 	jmp	x41
 0:	cmp	$0x42, %ah		# extended read
@@ -237,7 +237,7 @@ x18:	pop	%gs
 	stc
 	jmp	iret
 
-# extentions
+# extensions
 # returns:
 #  clear cf on success
 #  ah: version (1)

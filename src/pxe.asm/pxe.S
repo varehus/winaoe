@@ -154,7 +154,7 @@ pxeinit:
 
 # api: calls undi api
 #  (word)bp+6: function
-#  (word)bp+4: struct adress in cs
+#  (word)bp+4: struct address in cs
 # returns:
 #  ax passed on from api call
 .globl api

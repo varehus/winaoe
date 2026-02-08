@@ -3,7 +3,7 @@ Linux AoE target work. If you have questions or want
 to contribute contact Johannes Thoma
 <johannes@johannesthoma.com>
 
-The original winaoe driver is still availalbe at
+The original winaoe driver is still available at
 http://winaoe.org . I've just added a small patch
 to make it work with vblade (Linux) as well as
 patches for making it compile with 2019's mingw

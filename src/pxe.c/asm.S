@@ -112,7 +112,7 @@ _start:
 	pushl	%eax			# save eax
 	call	0f			# pushl eip
 0:	popl	%eax			# popl eip
-	subw	$0b, %ax		# offset by 0: to get _start adress
+	subw	$0b, %ax		# offset by 0: to get _start address
 	cmpw	$0x7c00, %ax		# did we start from 0x7c00?
 	je	0f			# if not, print error
 	print	"\nip is not 0x7c00, can not continue...\n"
@@ -141,7 +141,7 @@ _start:
 	movw	$(_end + STACKSIZE + 15), %cx	# get total size
 	shrw	$4, %cx			# change to round up paragraphs
 	subw	%cx, %ax		# calculate target segment
-	andw	$0xffc0, %ax		# round down to kb boundry
+	andw	$0xffc0, %ax		# round down to kb boundary
 	movw	%ax, %cs:_segment	# store target segment
 	shrw	$6, %ax			# convert to kb
 	pushw	$0x0040			# select bios area segment

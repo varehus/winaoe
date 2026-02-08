@@ -83,7 +83,7 @@ int3:
 	call	debug
 	jmp	.
 
-# count: inceases _count, break when BREAK reached
+# count: increases _count, break when BREAK reached
 .globl count
 count:
 	enter	$0, $0

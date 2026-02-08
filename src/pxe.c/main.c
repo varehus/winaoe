@@ -405,7 +405,7 @@ void _int13(t_cpu *cpu) {
       cpu->eflags &= ~1;
       break;
 
-    // extentions
+    // extensions
     //  bx: 0x55aa
     //  dl: drive number
     // returns:

@@ -236,7 +236,7 @@ BOOLEAN STDCALL AoESearchDrive(IN PDEVICEEXTENSION DeviceExtension) {
     Timeout.QuadPart = -500000LL;               // 500.000 * 100ns = 50.000.000 ns = 50ms
     KeWaitForSingleObject(&DeviceExtension->Disk.SearchEvent, Executive, KernelMode, FALSE, &Timeout);
     if (Stop) {
-      DbgPrint("AoESearchBootDrive cancled\n");
+      DbgPrint("AoESearchBootDrive canceled\n");
       return FALSE;
     }
 
